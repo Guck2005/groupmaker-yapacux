@@ -192,18 +192,20 @@ function App() {
             Comment l'utiliser ?
           </a>
         </div>
-        <Navbar.Toggle />
+        
       </Navbar>
 
       {/* Form */}
-      <form onSubmit={handleSubmit} className="space-y-4 mt-8">
+      <form onSubmit={handleSubmit} className="space-y-4 ">
         <div className="mb-8 w-full">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
             {/* Nombre de groupes et type de groupe */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
               {/* Input for number of groups */}
-              <div className="flex items-center mb-4 mr-8">
-                <Label htmlFor="numberOfGroups" className="whitespace-nowrap mb-2 mr-4">Nombre de groupes :</Label>
+              <div className="flex flex-col sm:flex-row items-center mb-4 sm:mr-8">
+                <Label htmlFor="numberOfGroups" className="whitespace-nowrap mb-2 sm:mb-0 sm:mr-4">
+                  Nombre de groupes :
+                </Label>
                 <input
                   id="numberOfGroups"
                   type="number"
@@ -214,9 +216,12 @@ function App() {
                 />
               </div>
 
+
               {/* Select for group type */}
-              <div className="flex items-center mb-4">
-                <Label htmlFor="groupType" className="whitespace-nowrap mb-2 mr-4">Type de groupe :</Label>
+              <div className="flex flex-col sm:flex-row items-center mb-4">
+                <Label htmlFor="groupType" className="whitespace-nowrap mb-2 sm:mb-0 sm:mr-4">
+                  Type de groupe :
+                </Label>
                 <select
                   id="groupType"
                   value={groupType}
@@ -228,20 +233,22 @@ function App() {
                   <option value="girls">Filles uniquement</option>
                 </select>
               </div>
+
             </div>
 
             {/* Totaux */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4">
-              <p className="bg-pink-200 text-pink-900 py-1 px-3 rounded-md font-semibold">
+              <p className="bg-pink-200 text-pink-900 py-1 px-3 rounded-md font-semibold mb-2 sm:mb-0">
                 Filles : {totalGirls}
               </p>
-              <p className="bg-blue-200 text-blue-900 py-1 px-3 rounded-md font-semibold">
+              <p className="bg-blue-200 text-blue-900 py-1 px-3 rounded-md font-semibold mb-2 sm:mb-0">
                 Garçons : {totalBoys}
               </p>
-              <p className="bg-yellow-200 text-yellow-900 py-1 px-3 rounded-md font-semibold">
+              <p className="bg-yellow-200 text-yellow-900 py-1 px-3 rounded-md font-semibold mb-2 sm:mb-0">
                 Total : {studentList.length}
               </p>
             </div>
+
           </div>
         </div>
 
