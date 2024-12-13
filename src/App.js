@@ -188,9 +188,13 @@ function App() {
               GroupMaker
             </span>
           </Navbar.Brand>
-          <a href="#" className="text-white font-medium ml-4 hover:underline">
-            Comment l'utiliser ?
-          </a>
+          <a
+  href="#"
+  className="text-white font-medium ml-4 hover:underline text-xs sm:text-base"
+>
+  Comment l'utiliser ?
+</a>
+
         </div>
         
       </Navbar>
